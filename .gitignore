@@ -1,0 +1,4 @@
+src/SMTPSvg/bin
+src/SMTPSvg/obj
+*.suo
+*.scc
