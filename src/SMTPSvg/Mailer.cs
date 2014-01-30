@@ -431,6 +431,8 @@ namespace SMTPSvg
 					msg.Headers.Add("Organization", Organization);
 
 				msg.Sender = new MailAddress(FromAddress, FromName);
+				msg.From = msg.Sender;
+
 				foreach(var addr in recipients)
 					msg.To.Add(addr);
 				foreach(var addr in ccs)
@@ -464,7 +466,9 @@ namespace SMTPSvg
 						break;
 				}
 
-				msg.ReplyTo = new MailAddress(ReplyTo);
+				if (ReplyTo != null)
+					msg.ReplyTo = new MailAddress(ReplyTo);
+
 				if(ReturnReceipt)
 					msg.DeliveryNotificationOptions = DeliveryNotificationOptions.OnFailure | DeliveryNotificationOptions.OnSuccess | DeliveryNotificationOptions.Delay;
 
