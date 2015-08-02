@@ -8,7 +8,7 @@ to memory location) - with no solution or to resort to other mailing methods,
 for example CDOSYS.
 
 Not wanting to change any code, I resorted to writing a simple wrapper around
-the .NET MailMessage class to create a component interface-compatible to the
+the .NET MailMessage class to create an interface-compatible component to the
 SMTPSvg.Mailer class.
 
 Far away from beeing identical in behavior and only tested for the specific
@@ -24,6 +24,6 @@ The component must be installed in the GAC to use it from classic ASP. Contact
 the MSDN Library on how to do that.
 <http://msdn.microsoft.com/en-us/library/dkkx7f79.aspx>
 
-Lincense
-========
+License
+=======
 GPL2 or newer, contact me if you feel you need something else.
